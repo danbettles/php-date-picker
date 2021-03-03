@@ -1,0 +1,114 @@
+.date-picker {
+    color: #333;
+}
+
+.date-picker a:link,
+.date-picker a:visited {
+    text-decoration: none;
+    color: #333;
+}
+
+.date-picker table {
+    padding: 0 12px;
+}
+
+.date-picker caption {
+    margin: 16px 24px;
+}
+
+.date-picker caption > div > div {
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+.date-picker caption > div > div.title {
+    width: 50%;
+    font-weight: bold;
+    text-align: left;
+}
+
+.date-picker caption > div > div.month-pagination {
+    width: 50%;
+    text-align: right;
+}
+
+.date-picker caption > div > div.month-pagination a:first-child {
+    padding-right: 24px;
+}
+
+.date-picker caption > div > div.month-pagination a.previous::before {
+    content: "<";
+}
+
+.date-picker caption > div > div.month-pagination a.next::after {
+    content: ">";
+}
+
+/*Screen-reader only.*/
+/*See https://webaim.org/techniques/css/invisiblecontent/#techniques*/
+.date-picker caption > div > div.month-pagination a span {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.date-picker th,
+.date-picker td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 0;
+}
+
+.date-picker th {
+    font-size: smaller;
+    font-weight: lighter;
+    color: #999;
+}
+
+.date-picker th span,
+.date-picker td a {
+    display: block;
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+}
+
+.date-picker td a {
+    margin-bottom: 16px;
+}
+
+.date-picker td.today a {
+    border-color: #333;
+}
+
+.date-picker td.selected a {
+    color: #fff;
+    background-color: #6200ee;
+}
+
+.date-picker td.today.selected a {
+    border-color: #333;
+}
+
+.date-picker td.has-events a {
+    position: relative;
+}
+
+/*See https://codepen.io/bja1011/pen/JYyNZN*/
+.date-picker td.has-events a::after {
+    content: "";  /*Must have content.*/
+    position: absolute;
+    bottom: -12px;
+    left: 13px;
+    width: 6px;
+    height: 6px;
+    background-color: #999;
+    border: 1px solid #999;
+    border-radius: 50%;
+}

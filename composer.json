@@ -1,0 +1,34 @@
+{
+    "name": "danbettles/php-date-picker",
+    "description": "",
+    "type": "library",
+    "require": {
+        "php": "^7.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "squizlabs/php_codesniffer": "^3.5",
+        "danbettles/codesniffer-standard": "^2.0"
+    },
+    "license": "ISC",
+    "authors": [
+        {
+            "name": "Daniel Bettles",
+            "email": "danbettles@yahoo.co.uk"
+        }
+    ],
+    "autoload": {
+        "psr-4": {"DanBettles\\DatePicker\\": "src/"}
+    },
+    "autoload-dev": {
+        "psr-4": {"DanBettles\\DatePicker\\Tests\\": "tests/src/"}
+    },
+    "scripts": {
+        "app:test": "phpunit --bootstrap=vendor/autoload.php --colors=always tests",
+        "app:lint": "phpcs --standard=phpcs.xml",
+        "app:check-quality": [
+            "@app:test",
+            "@app:lint"
+        ]
+    }
+}
